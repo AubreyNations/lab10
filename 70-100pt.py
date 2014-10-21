@@ -24,5 +24,20 @@ drawpad.grid(row=0, column=1)
 
 # Insert your code here to draw the house!
 
+#Making a rectangle that goes slightly off of the page onto and filled with green
+grass = drawpad.create_rectangle(0,550,805,605, fill = "green")
+
+#Making the body of the house
+housebody = drawpad.create_rectangle(250,300,550,550, fill = "red")
+
+#Making the roof of the house
+leftroof = drawpad.create_line(250,300,400,200)
+rightroof = drawpad.create_line(400,200,550,300)
+
+#Making the door of the house
+door = drawpad.create_rectangle(350,400,450,550, fill = "lightblue")
+
+#making windows for the house
+#windows = 
 
 root.mainloop()
