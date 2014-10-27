@@ -1,20 +1,3 @@
-##########################################
-#                                        #
-#             Draw a house!              #
-#                                        #
-##########################################
-
-# Use create_line(), create_rectangle() and create_oval() to make a 
-# drawing of a house using the tKinter Canvas widget.
-
-# 70pt: House outline (roof and the house)
-# 80pt: Square windows and a door
-# 90pt: A door handle plus a chimney!
-# 100pt: Green grass on the ground and a red house!
-
-# Minus 5pts if your code has no comments
-# Minus 10pts if you only commit once to github
-
 from Tkinter import *
 root = Tk()
 
@@ -24,7 +7,10 @@ drawpad.grid(row=0, column=1)
 
 # Insert your code here to draw the house!
 
-#Making a rectangle that goes slightly off of the page onto and filled with green
+#Making the sky.
+sky = drawpad.create_rectangle(0,0,800,600, fill = "lightblue")
+
+#Making a rectangle that goes slightly off of the page onto and filled with green. This is the grass.
 grass = drawpad.create_rectangle(0,550,805,605, fill = "green")
 
 #Making the body of the house
@@ -35,9 +21,18 @@ leftroof = drawpad.create_line(250,300,400,200)
 rightroof = drawpad.create_line(400,200,550,300)
 
 #Making the door of the house
-door = drawpad.create_rectangle(350,400,450,550, fill = "lightblue")
+door = drawpad.create_rectangle(350,400,450,550, fill = "pink")
 
 #making windows for the house
-#windows = 
+windows = drawpad.create_rectangle(275,400,325,350, fill = "lightblue")
+windows2 = drawpad.create_rectangle(475,400,525,350, fill = "lightblue")
+
+#Making the door knob for the house
+doorknob = drawpad.create_oval(425,500,435,490, fill = "yellow")
+
+#Making the chimney for the house
+leftchimney = drawpad.create_line(480,225,480,255)
+rightchimney = drawpad.create_line(545,225,545,297)
+topchimney = drawpad.create_rectangle(475,200,550,225, fill = "red")
 
 root.mainloop()
